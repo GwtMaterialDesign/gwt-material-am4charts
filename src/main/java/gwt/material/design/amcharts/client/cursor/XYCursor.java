@@ -20,6 +20,7 @@
 package gwt.material.design.amcharts.client.cursor;
 
 import gwt.material.design.amcharts.client.axis.Axis;
+import gwt.material.design.amcharts.client.series.XYSeries;
 import gwt.material.design.amcore.client.base.Sprite;
 import gwt.material.design.amcore.client.constants.XYCursorBehavior;
 import gwt.material.design.amcore.client.events.SpriteEventDispatcher;
@@ -43,6 +44,9 @@ public class XYCursor extends Cursor {
     public boolean fullWidthLineY;
 
     @JsProperty
+    public boolean hideSeriesTooltipsOnSelection;
+
+    @JsProperty
     public Sprite lineX;
 
     @JsProperty
@@ -52,7 +56,13 @@ public class XYCursor extends Cursor {
     public double maxPanOut;
 
     @JsProperty
+    public int maxTooltipDistance;
+
+    @JsProperty
     public Sprite selection;
+
+    @JsProperty
+    public XYSeries[] snapToSeries;
 
     @JsProperty
     public Axis xAxis;
