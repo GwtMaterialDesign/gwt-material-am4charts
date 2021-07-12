@@ -86,6 +86,9 @@ public class Am4Core {
     @JsMethod(namespace = "am4core")
     public static native void unuseAllThemes();
 
+    @JsMethod(namespace = "am4core")
+    public static native void addLicense(String key);
+
     @JsOverlay
     public final static void useTheme(ChartTheme theme) {
         if (theme != null) {
